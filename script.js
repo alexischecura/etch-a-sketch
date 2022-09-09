@@ -18,19 +18,26 @@ const createGrid = (size) => {
 createGrid(size)
 
 let color = colorSelector.value
-colorSelector.addEventListener("input", (a) => {color = a.target.value}, false);
-colorSelector.addEventListener("change", (a) => {color = a.target.value}, false);
+colorSelector.addEventListener("input", (a) => {
+  color = a.target.value
+  rainbowMode = false}, false);
+colorSelector.addEventListener("change", (a) => {
+  color = a.target.value
+  rainbowMode = false
+}, false);
 
 const colorBlack = document.querySelector('.colorBlack')
 colorBlack.addEventListener('click', () => {
   colorSelector.value = '#000000';
   color = colorSelector.value;
+  rainbowMode = false
 }
 )
 const rubber = document.querySelector('.rubber')
 rubber.addEventListener('click', () => {
   colorSelector.value = '#FFFFFF';
   color = colorSelector.value;
+  rainbowMode = false
 }
 )
 
@@ -38,18 +45,21 @@ let rainbowMode = false;
 const rainbowBtn = document.querySelector('.rainbow')
 rainbowBtn.addEventListener('click', () => {
   rainbowMode = !rainbowMode
-  setInterval(() => {
-      colorSelector.value = '#AAAAAA';
-      color = colorSelector.value;
-    }, 100);
+  let r = 0;
+  let g = 0;
+  let b = 0;
+})
 
-  }
-)
 
 const boxs = document.querySelectorAll('.grid')
 function changeBGC() {
+  if (rainbowMode){
+    r = Math.round(Math.random()*255)
+    g = Math.round(Math.random()*255)
+    b = Math.round(Math.random()*255)
+    color = `rgb(${r},${g},${b})`}
     this.style.backgroundColor = color;
-}
+  }
 
 boxs.forEach(box => box.addEventListener("mousedown", changeBGC, false))
 

@@ -9,23 +9,32 @@
     <title>Etch-a-Sketch</title>
   </head>
   <body>
+    <h1>Etch-a-Sketch</h1>
     <div class="main">
       <div class="options">
         <label>Pick a color</label>
         <input class="colorSelector" type="color" />
-        <div class="black-white">
-            <button class="colorBlack">Black</button>
-            <button class="rubber">White</button>
+        <div class="colors">
+          <div class="colorWhite"></div>
+          <div class="colorBlack"></div>
+          <div class="colorRed"></div>
+          <div class="colorGreen"></div>
+          <div class="colorBlue"></div>
+          <div class="colorYellow"></div>
         </div>
-
-        <div>
-            <button class="rainbow">Raimbow</button>
+        <p>GRID: <span class="sizeDom">16 X 16</span></p>  
+        <div class="size">
+          <button class="sizeBigger">+</button>
+          <button class="sizeSmaller">-</button>
         </div>
         <div>
-            <button class="shadding">Shadding</button>
+          <button class="rainbow">Rainbow</button>
         </div>
         <div>
-            <button class="erase">Erase</button>
+          <button class="shadding">Shadding</button>
+        </div>
+        <div>
+          <button class="erase">Erase</button>
         </div>
       </div>
       <div class="grids"></div>

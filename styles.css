@@ -1,10 +1,16 @@
 .grid{
     user-select: none;
 }
+
 body{
+    margin: 0;
     display: flex;
-    justify-content: center;
-    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 .grids{
     display: flex;
@@ -17,8 +23,9 @@ body{
     background-color: black;
 }
 .colorSelector{
-    width: 80px;
+    width: 84px;
     height: 50px;
+    border: none;
 }
 
 .main{
@@ -34,4 +41,51 @@ body{
     user-select: none
 }
 
-button{user-select: none}
+button{
+    width: 100px;
+    height: 50px;
+    user-select: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.colors{
+    display: flex;
+    width: 84px;
+    flex-wrap: wrap;
+}
+.colors div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000000 ;
+}
+.colorRed{
+    background-color: #FF0000;
+}
+.colorBlue{
+    background-color: #0000FF;
+}
+.colorYellow{
+    background: #FFFF00;
+}
+.colorBlack{
+    background-color: #000000;
+}
+.colorGreen{
+    background-color: #00FF00;
+}
+.colorWhite{
+    background-color: #FFFFFF;
+}
+.rainbow{
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+    
+}
+
+
+.selected{
+    box-shadow: 2px 2px 8px 4px black;
+}
+.sizeBigger, .sizeSmaller{
+    width: 48px;
+    background-color: cyan;
+}

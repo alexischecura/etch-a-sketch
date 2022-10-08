@@ -22,7 +22,18 @@
           <div class="colorBlue"></div>
           <div class="colorYellow"></div>
         </div>
-        <p>GRID: <span class="sizeDom">16 X 16</span></p>  
+        <label for="tamanio">Choose the size: </label>
+        <input
+          type="range"
+          name="tamanio"
+          id="tamanio"
+          min="1"
+          max="64"
+          step="1"
+          value="16"
+        />
+        <output class="tamanio-output" for="tamanio"></output>
+        <p>GRID: <span class="sizeDom">16 X 16</span></p>
         <div class="size">
           <button class="sizeBigger">+</button>
           <button class="sizeSmaller">-</button>

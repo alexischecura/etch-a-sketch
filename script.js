@@ -21,6 +21,16 @@ createGrid(sizeGridDefault);
 
 let sizeGrid = sizeGridDefault;
 
+const tamanio = document.querySelector("#tamanio");
+const output = document.querySelector(".tamanio-output");
+
+output.textContent = tamanio.value;
+
+tamanio.addEventListener("input", () => {
+  sizeDom.innerText = tamanio.value + " X " + tamanio.value;
+  createGrid(tamanio.value);
+});
+
 const sizeBigger = document.querySelector(".sizeBigger");
 const sizeSmaller = document.querySelector(".sizeSmaller");
 const sizeDom = document.querySelector(".sizeDom");
